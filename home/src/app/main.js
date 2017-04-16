@@ -16,7 +16,7 @@ app.use(cors())
 app.use(compression())
 app.use('/static/', express.static(path.resolve(__dirname, '../public/static')))
 
-app.get('/*', (req, res) => {
+app.get('/', (req, res) => {
   res.send(
     render({
       title: '风云网络官网',
