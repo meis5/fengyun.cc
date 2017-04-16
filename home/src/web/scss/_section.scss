@@ -36,7 +36,7 @@
   z-index: 9;
   transform: translateY(-100%);
   &:before {
-    font-size: 50px;
+    font-size: 30px;
     color: rgba(0, 0, 0, .4);
   }
 }
@@ -51,18 +51,39 @@
 
 .banner-slider .slick-dots {
   position: absolute;
-  bottom: 40px;
+  bottom: 20px;
   li {
-    margin-right: 20px;
+    margin-right: 10px;
   }
   button:before {
-    font-size: 20px;
+    font-size: 16px;
   }
 }
 
 // show case
 .show-case-box {
-  margin-top: 40px;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+.show-case-box-card {
+  position: relative;
+  div {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    width: 100%;
+    overflow-x: hidden;
+    font-size: 13px;
+    padding: 10px 0;
+  }
+  a {
+    display: block;
+    margin-bottom: 20px;
+    img {
+      display: block;
+      max-width: 100%;
+    }
+  }
 }
 
 // footer
