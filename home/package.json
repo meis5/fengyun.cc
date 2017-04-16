@@ -23,7 +23,6 @@
     "jss": "^7.0.3",
     "jss-preset-default": "^2.0.0",
     "normalize.css": "^6.0.0",
-    "postcss-js": "^0.3.0",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
     "react-redux": "^5.0.4",
