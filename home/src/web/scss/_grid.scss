@@ -1,0 +1,36 @@
+@import "variables";
+
+.r {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.r-g {
+  margin-left: -10px;
+  margin-right: -10px;
+}
+
+.c {
+  flex-grow: 1;
+}
+
+.r-g .c, .r-g [class^="c-"] {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+@for $i from 1 through $grid-columns {
+  .c-#{$i} {
+    width: $i / $grid-columns * 100%;
+  }
+}
+
+@each $key, $value in $grid-breakpoints {
+  @media (min-width: $value) {
+    @for $i from 1 through $grid-columns {
+      .c-#{$key}-#{$i} {
+        width: $i / $grid-columns * 100%;
+      }
+    }
+  }
+}

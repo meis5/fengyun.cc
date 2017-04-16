@@ -1,0 +1,86 @@
+@import "variables";
+
+// header
+.navbar {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.navbar .ctn {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.navbar a {
+  display: block;
+  padding: 10px 10px;
+  font-size: 13px;
+  color: $navbar-inverse-color;
+}
+
+.navbar a:hover {
+  color: $navbar-inverse-hover-color;
+}
+
+// banner
+.banner-slider {
+  position: relative;
+}
+
+.banner-slider img {
+  display: block;
+  width: 100%;
+}
+
+.banner-slider .slick-arrow {
+  position: absolute;
+  z-index: 9;
+  transform: translateY(-100%);
+  &:before {
+    font-size: 50px;
+    color: rgba(0, 0, 0, .4);
+  }
+}
+
+.banner-slider .slick-prev {
+  left: 25px;
+}
+
+.banner-slider .slick-next {
+  right: 55px;
+}
+
+.banner-slider .slick-dots {
+  position: absolute;
+  bottom: 40px;
+  li {
+    margin-right: 20px;
+  }
+  button:before {
+    font-size: 20px;
+  }
+}
+
+// show case
+.show-case-box {
+  margin-top: 40px;
+}
+
+// footer
+.footer {
+  padding: 20px 0;
+  font-size: 12px;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.9);
+  @media (max-width: map_get($container-max-widths, 'md')) {
+    text-align: center;
+  }
+  a {
+    margin-right: 15px;
+    padding: 5px 0;
+    display: inline-block;
+    color: #cccccc;
+  }
+  .footer-copyright {
+    color: #aaaaaa;
+  }
+}
