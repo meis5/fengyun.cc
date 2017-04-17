@@ -156,3 +156,7 @@ background-color:transparent;
 .carousel-inner .item {
   padding-top: 100px;
 }
+
+.vegas-overlay {
+  display: none;
+}
