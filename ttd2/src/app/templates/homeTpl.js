@@ -26,9 +26,10 @@ export default `
     }
 
     .launch-btn {
+      display: none;
       position: absolute;
       width: 100%;
-      bottom: 440px;
+      bottom: 180px;
       text-align: center;
     }
 
@@ -41,7 +42,7 @@ export default `
     .dl-btn {
       position: absolute;
       width: 100%;
-      bottom: 180px;
+      bottom: 440px;
       text-align: center;
     }
 
