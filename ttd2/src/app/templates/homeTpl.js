@@ -42,7 +42,7 @@ export default `
     .dl-btn {
       position: absolute;
       width: 100%;
-      bottom: 440px;
+      bottom: 340px;
       text-align: center;
     }
 
