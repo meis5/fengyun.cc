@@ -1,0 +1,59 @@
+@import "variables";
+
+html, body, p, div, span, a, ul, li, ol {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-size: $font-size-base;
+  font-family: $font-family-base;
+  line-height: $line-height-base;
+  min-height: 100%;
+}
+
+a {
+  color: $link-color;
+  text-decoration: none;
+}
+
+a:hover {
+  color: $link-hover-color;
+  text-decoration: underline;
+}
+
+//========== Ctn ==========
+.ctn {
+  width: 100%;
+  padding: 0 10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@each $key, $value in $grid-breakpoints {
+  @media (min-width: $value) {
+    .ctn {
+      width: map_get($container-max-widths, $key);
+    }
+  }
+}
+
+// ========== BG ==========
+.bg-gray {
+  background-color: $gray-dark;
+}
+
+html, body, #root {
+  position: relative;
+  height: 100%;
+}
+
+//
+.react-root {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}

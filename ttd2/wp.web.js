@@ -11,7 +11,7 @@ const devPort = port - 1
 
 const src = path.resolve(__dirname, './src')
 const lib = path.resolve(__dirname, '../node_modules')
-const dst = path.resolve(__dirname, '../public/static/home/assets/')
+const dst = path.resolve(__dirname, '../public/static/ttd2/assets/')
 
 const development = {
   devtool: 'eval-cheap-module-source-map',
