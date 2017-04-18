@@ -32,22 +32,10 @@ export default `
       text-align: center;
     }
 
-    .launch-btn-img, .launch-btn-img-grey {
+    .launch-btn-img {
       width: 80%;
       display: inline-block;
       vertical-align: top;
-    }
-
-    .launch-btn .launch-btn-img-grey {
-      display: none;
-    }
-
-    .launch-btn:hover .launch-btn-img, .launch-btn:active .launch-btn-img {
-      display: none;
-    }
-
-    .launch-btn:hover .launch-btn-img-grey, .launch-btn:active .launch-btn-img-grey {
-      display: inline-block;
     }
 
     .dl-btn {
@@ -57,7 +45,7 @@ export default `
       text-align: center;
     }
 
-    .dl-btn-img, .dl-btn-img-grey {
+    .dl-btn-img {
       width: 80%;
       display: inline-block;
       vertical-align: top;
@@ -65,14 +53,6 @@ export default `
 
     .dl-btn .dl-btn-img-grey {
       display: none;
-    }
-
-    .dl-btn:hover .dl-btn-img, .dl-btn:active .dl-btn-img {
-      display: none;
-    }
-
-    .dl-btn:hover .dl-btn-img-grey, .dl-btn:active .dl-btn-img-grey {
-      display: inline-block;
     }
     
     #weixin-tip img {
@@ -85,13 +65,13 @@ export default `
   <img src="${resourcesPath}/bg.png" class="bg-img" alt="">
   <a class="launch-btn" href="http://ttd2.fengyun.cc/#">
     <img class="launch-btn-img" src="${resourcesPath}/launch_game_btn.PNG" alt="">
-    <img class="launch-btn-img-grey" src="${resourcesPath}/launch_game_btn_grey.PNG" alt="">
   </a>
   <a class="dl-btn" href="http://ttd2.fengyun.cc/#">
     <img class="dl-btn-img" src="${resourcesPath}/dl_btn.PNG" alt="">
-    <img class="dl-btn-img-grey" src="${resourcesPath}/dl_btn_grey.PNG" alt="">
   </a>
   <script type="text/javascript">
+    var eventType = 'ontouchstart' in window || navigator.maxTouchPoints ? 'touchstart' : 'click'; 
+  
     function is_weixin() {
       var ua = navigator.userAgent.toLowerCase();
       if (ua.match(/MicroMessenger/i) == "micromessenger") {
@@ -124,7 +104,7 @@ export default `
     var cssText = "#weixin-tip{position: fixed; left:0; top:0; background: rgba(0,0,0,0.8); filter:alpha(opacity=80); width: 100%; height:100%; z-index: 100;} #weixin-tip p{text-align: right; margin-top: 10%; padding:0 5%;}";
 
     var dl = document.getElementsByClassName('dl-btn')[0];
-    dl.addEventListener('click', function (e) {
+    dl.addEventListener(eventType, function (e) {
       e.preventDefault()
       var ua = navigator.userAgent.toLowerCase();
       if (/iphone|ipad|ipod/.test(ua)) {
@@ -137,7 +117,6 @@ export default `
           window.location = 'http://zgamedaerdown.oss-cn-shanghai.aliyuncs.com/daer.apk';
         }
       } else {
-        alert('unknown')
       }
     });
   </script>
