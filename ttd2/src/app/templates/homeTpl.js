@@ -109,7 +109,7 @@ export default `
       e.preventDefault()
       var ua = navigator.userAgent.toLowerCase();
       if (/iphone|ipad|ipod/.test(ua)) {
-        window.location = 'https://fir.im/16q5'
+        window.location = 'https://fir.im/daer'
       } else if (/android/.test(ua)) {
         if (isWeixin) {
           loadHtml();
